@@ -4,16 +4,22 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { NewOfferPageRoutingModule } from './new-offer-routing.module';
-
 import { NewOfferPage } from './new-offer.page';
+import { Routes, RouterModule } from '@angular/router';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: NewOfferPage
+  }
+];
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    NewOfferPageRoutingModule
+    RouterModule.forChild(routes)
   ],
   declarations: [NewOfferPage]
 })

@@ -4,16 +4,22 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { OfferBookingsPageRoutingModule } from './offer-bookings-routing.module';
-
 import { OfferBookingsPage } from './offer-bookings.page';
+import { Routes, RouterModule } from '@angular/router';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: OfferBookingsPage
+  }
+];
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    OfferBookingsPageRoutingModule
+    RouterModule.forChild(routes)
   ],
   declarations: [OfferBookingsPage]
 })
